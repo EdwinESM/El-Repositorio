@@ -35,13 +35,13 @@ def get_spark_results(url_results):
     if  (response.status_code ==  200):
         st.write(response.json())
 
-st.title("Juan Pablo Hernández Arrieta")
+st.title("Edwin Emmanuel Salazar Meza")
 
-st.title("A01738068")
+st.title("A01738380")
 st.header("spark-submit Job")
 
-github_user  =  st.text_input('Github user', value='Kelp-klep')
-github_repo  =  st.text_input('Github repo', value='semanaTecjupah')
+github_user  =  st.text_input('Github user', value='EdwinESM')
+github_repo  =  st.text_input('Github repo', value='El-Repositorio')
 spark_job    =  st.text_input('Spark job', value='spark')
 github_token =  st.text_input('Github token', value='***')
 
