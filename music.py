@@ -25,7 +25,7 @@ if __name__ == "__main__":
     df_pulse_clarity = spark.sql(query)
     df_pulse_clarity.show(20)
 
-    # Guardar los resultados en JSON
+    # Guardar los resultados en JSONN
     results = df_pulse_clarity.toJSON().collect()
     df_pulse_clarity.write.mode("overwrite").json("results")
 
