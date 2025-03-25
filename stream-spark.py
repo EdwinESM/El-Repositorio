@@ -6,7 +6,7 @@ import json
 def post_spark_job(user, repo, job, token):
     # Define the API endpoint
     url = 'https://api.github.com/repos/' + user + '/' + repo + '/dispatches'
-    # Define the data to be sent in the POST request
+    # Define the data to be sent in the POST requestt
     payload = {
       "event_type": job
     }
