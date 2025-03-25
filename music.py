@@ -25,13 +25,9 @@ if __name__ == "__main__":
     df_pulse_clarity = spark.sql(query)
     df_pulse_clarity.show(20)
 
-    # Guardar los resultados en JSONN
-    results = df_pulse_clarity.toJSON().collect()
-    df_pulse_clarity.write.mode("overwrite").json("results")
-
-    with open('results/pulse_clarity.json', 'w') as file:
+   results = df_filtered.toJSON().collect()
+    with open('filtered_data.json', 'w') as file:
         json.dump(results, file)
 
-    print("Datos guardados en `results/pulse_clarity.json`")
-
+    print("Datos guardados en `filtered_data.json`")
     spark.stop()
