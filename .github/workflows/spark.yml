@@ -38,13 +38,13 @@ jobs:
         hadoop-version: '3'
         
     - run: spark-submit --version
-    - run: spark-submit --master local BaseD.py Global_Cybersecurity_Threats_2015-2024.csv 
+    - run: spark-submit --master local music.py Turkish_Music_Mood_Recognition.csv
     - run: ls -la
         
     - name: GIT commit and push docs
       env: 
         CI_COMMIT_MESSAGE: save spark results
-        CI_COMMIT_AUTHOR: Myr730 
+        CI_COMMIT_AUTHOR: EdwinESM 
       run: |
         git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
         git config --global user.email "EdwinESM@live.com.mx"
