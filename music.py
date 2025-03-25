@@ -28,7 +28,7 @@ if __name__ == "__main__":
     df_pulse_clarity = spark.sql(query)
     df_pulse_clarity.show()
 
-    # Crear directorio de salida si no existe
+    # Crear directorio de salida si no existee
     output_dir = "results"
     os.makedirs(output_dir, exist_ok=True)
 
